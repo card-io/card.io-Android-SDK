@@ -22,7 +22,7 @@ Instructions
 
 The card.io Android SDK is a single card.io.jar file and two native libraries.
 
-The information in this guide is enough to get started. For additional details, see our **[javadocs]({% url )**.
+The information in this guide is enough to get started. For additional details, see our **[javadoc](javadoc)**.
 
 ### Sign up for card.io
 
