@@ -159,7 +159,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ### Hints &amp; Tips
 
-* [Javadocs]() are provided in this repo for a complete reference.
+* [Javadocs](javadoc) are provided in this repo for a complete reference.
 * card.io errors and warnings will be logged to the "card.io" tag.
 * The card.io zip bundle is designed to be unzipped in to the your project directory.
     * **You should not attempt to change this directory structure.**
