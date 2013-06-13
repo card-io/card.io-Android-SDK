@@ -38,11 +38,11 @@ A manual entry fallback mode is provided for devices that do not meet these requ
 
 ### Instructions
 
-1. Get the latest SDK by cloning this repo or downloading an archive of the most recent tag.
+1. Get the latest SDK by cloning this repo or [downloading an archive of the most recent tag](tags).
 
 2. Extract the card.io SDK
 
-    1. Unzip the SDK into your project directory. The card.io.jar file and bundled native shared libraries will be unzipped into your project's "libs" directory.
+    1. Unzip the tag archive into your project directory or copy `libs/*` into your projects `libs/` directory. 
 
         Note that the path for each of these files is important and should not be changed.
 
