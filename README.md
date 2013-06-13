@@ -22,7 +22,7 @@ Instructions
 
 The card.io Android SDK is a single card.io.jar file and two native libraries.
 
-The information in this guide is enough to get started. For additional details, see our **[javadoc](javadoc)**.
+The information in this guide is enough to get started. For additional details, see our **[javadoc](http://card-io.github.io/card.io-Android-SDK/)**.
 
 ### Sign up for card.io
 
@@ -159,7 +159,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ### Hints &amp; Tips
 
-* [Javadocs](javadoc) are provided in this repo for a complete reference.
+) are provided in this repo for a complete reference.
 * card.io errors and warnings will be logged to the "card.io" tag.
 * The card.io zip bundle is designed to be unzipped in to the your project directory.
     * **You should not attempt to change this directory structure.**
