@@ -146,4 +146,9 @@ Note that if your app is not targeting x86 or MIPS, you can safely leave out the
 * Don't require portrait for DataEntryActivity
 * Fix scanner crash in landscape
 
+3.0.6 - June 21, 2013
+---------------------
+* Add missing string to internationalization list.
+* Add log note when processor is not supported.
+
 
