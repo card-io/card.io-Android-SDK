@@ -156,4 +156,7 @@ Note that if your app is not targeting x86 or MIPS, you can safely leave out the
 * Fix rotation issue when starting in landscape mode
 * Fix card image disappearing when rotating device in card details screen
 
+3.0.8 - July 3, 2013
+---------------------
+* Fix pre Android 4.0 hanging issue
 
