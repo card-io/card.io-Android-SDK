@@ -151,4 +151,9 @@ Note that if your app is not targeting x86 or MIPS, you can safely leave out the
 * Add missing string to internationalization list.
 * Add log note when processor is not supported.
 
+3.0.7 - July 3, 2013
+---------------------
+* Fix rotation issue when starting in landscape mode
+* Fix card image disappearing when rotating device in card details screen
+
 
