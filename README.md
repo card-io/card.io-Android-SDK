@@ -38,7 +38,7 @@ A manual entry fallback mode is provided for devices that do not meet these requ
 
 ### Instructions
 
-1. Get the latest SDK by cloning this repo or [downloading an archive of the most recent tag](tags).
+1. Get the latest SDK by cloning this repo or [downloading an archive of the most recent tag](https://github.com/card-io/card.io-Android-SDK/tags).
 
 2. Extract the card.io SDK
 
