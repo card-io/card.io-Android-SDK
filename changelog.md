@@ -160,3 +160,10 @@ Note that if your app is not targeting x86 or MIPS, you can safely leave out the
 ---------------------
 * Fix pre Android 4.0 hanging issue
 
+3.1.0 - August 13, 2013
+---------------------
+* Add translations of all strings into ~20 languages, in addition to American English.
+    - Translation choice is controlled by EXTRA_LANGUAGE_OR_LOCALE in CardIOActivity
+    - The translations that a few developers had previously created for their own apps will no longer be used by the SDK.
+    - NOTE: Default language, if not set by your app, will now be based upon the device's current language setting. 
+
