@@ -109,7 +109,7 @@ public void onScanPress(View v) {
     // customize these values to suit your needs.
     scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, true); // default: true
     scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_CVV, false); // default: false
-    scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_ZIP, false); // default: false
+    scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_POSTAL_CODE, false); // default: false
 
     // MY_SCAN_REQUEST_CODE is arbitrary and is only used within this activity.
     startActivityForResult(scanIntent, MY_SCAN_REQUEST_CODE);
@@ -143,8 +143,8 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
                 resultDisplayStr += "CVV has " + scanResult.cvv.length() + " digits.\n";
             }
 
-            if (scanResult.zip != null) {
-                resultDisplayStr += "Zip: " + scanResult.zip + "\n";
+            if (scanResult.postalCode != null) {
+                resultDisplayStr += "Postal Code: " + scanResult.postalCode + "\n";
             }
         }
         else {
