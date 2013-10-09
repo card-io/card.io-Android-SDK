@@ -1,6 +1,12 @@
 card.io Android SDK change log and release notes
 ================================================
 
+3.1.3 October 9, 2013
+------------------------
+* Add guide color customization through CardIOActivity.EXTRA_GUIDE_COLOR
+* Add ability to skip confirmation activity through CardIOActivity.EXTRA_SUPPRESS_CONFIRMATION
+* Fix camera not recognized issue for some devices
+
 3.1.2 - September 16, 2013
 ------------------------
 * Restrict postal code maximum length

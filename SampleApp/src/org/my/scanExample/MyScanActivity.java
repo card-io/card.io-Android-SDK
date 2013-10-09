@@ -92,7 +92,7 @@ public class MyScanActivity extends Activity
 				resultStr += "CVV has " + scanResult.cvv.length() + " digits.\n";
 			}
 
-			if (scanResult.zip != null) {
+			if (scanResult.postalCode != null) {
 				resultStr += "Postal Code: " + scanResult.postalCode + "\n";
 			}
 		}
