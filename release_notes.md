@@ -1,6 +1,11 @@
 card.io Android SDK change log and release notes
 ================================================
 
+3.1.4 January 3, 2014
+------------------------
+* Remove any transparency from guide color
+* Add language support for Arabic and Malay
+
 3.1.3 October 9, 2013
 ------------------------
 * Add guide color customization through CardIOActivity.EXTRA_GUIDE_COLOR
