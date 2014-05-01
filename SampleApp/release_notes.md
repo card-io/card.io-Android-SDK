@@ -1,6 +1,11 @@
 card.io Android SDK change log and release notes
 ================================================
 
+3.1.5 May 1, 2014
+-----------------
+* Add Thai (th) to our supported localizations.
+* Update PayPal logo.
+
 3.1.4 January 3, 2014
 ------------------------
 * Remove any transparency from guide color
