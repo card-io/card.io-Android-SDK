@@ -46,6 +46,9 @@ A manual entry fallback mode is provided for devices that do not meet these requ
        - Gradle users with android-gradle-plugin version `0.7.2+` should put `card.io.jar` in `libs/` and the subfolders containing `*.so` files into `src/main/jniLibs`
        - Note that the subdirectories containing `.so` files are important and should not be changed.
 
+
+        Note that the path for each of these files is important and should not be changed.
+
     2. If using Eclipse, right-click <libs>libs/card.io.jar</libs> then select "Build Path" &rarr; "Add to Build Path".
 
 3. Edit AndroidManifest.xml. We're going to add a few additional items in here:

@@ -1,6 +1,11 @@
 card.io Android SDK change log and release notes
 ================================================
 
+3.1.6
+-----
+* Add support for Diners Club and China UnionPay cards.
+* Rename zh-Hant_HK -> zh-Hant so that HK is chosen by default for other regions.
+
 3.1.5 May 1, 2014
 -----------------
 * Add Thai (th) to our supported localizations.
