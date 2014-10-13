@@ -1,6 +1,11 @@
 card.io Android SDK change log and release notes
 ================================================
 
+3.2.0
+-----
+* Eliminate App Token. Developers no longer need to sign up on the card.io site before using card.io.
+* Add Icelandic (is) to our supported localizations. (Thank you, Martin Kaplan!) 
+
 3.1.6
 -----
 * Add support for Diners Club and China UnionPay cards.

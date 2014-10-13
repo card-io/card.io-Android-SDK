@@ -24,9 +24,7 @@ The card.io Android SDK is a single card.io.jar file and two native libraries.
 
 The information in this guide is enough to get started. For additional details, see our **[javadoc](http://card-io.github.io/card.io-Android-SDK/)**.
 
-### Sign up for card.io
-
-*   To use the card.io SDK, you'll need to [sign up](https://www.card.io/accounts/register/developer) and [get an app token](https://www.card.io/apps/). 
+*(Note: in the past, developers needed to sign up at the [card.io site](https://www.card.io) and obtain an* `app token`. *This is no longer required.)* 
 
 ### Requirements for card scanning
 
