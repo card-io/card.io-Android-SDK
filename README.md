@@ -61,19 +61,13 @@ A manual entry fallback mode is provided for devices that do not meet these requ
     2. Also in your `<manifest>` element, make sure the following permissions and features are present:
 
         ```xml
-        <!-- Permission to access network state - required -->
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-                <!-- Permission to access internet - required -->
-        <uses-permission android:name="android.permission.INTERNET" />
-
-                <!-- Permission to use camera - required -->
+        <!-- Permission to use camera - required -->
         <uses-permission android:name="android.permission.CAMERA" />
 
-                <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
+        <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
         <uses-permission android:name="android.permission.VIBRATE" />
 
-                <!-- Camera features - recommended -->
+        <!-- Camera features - recommended -->
         <uses-feature android:name="android.hardware.camera" android:required="false" />
         <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
         <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
@@ -103,9 +97,6 @@ First, we'll assume that you're going to launch the scanner from a button, and t
 ```java
 public void onScanPress(View v) {
     Intent scanIntent = new Intent(this, CardIOActivity.class);
-
-    // required for authentication with card.io
-    scanIntent.putExtra(CardIOActivity.EXTRA_APP_TOKEN, MY_CARDIO_APP_TOKEN);
 
     // customize these values to suit your needs.
     scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, true); // default: true

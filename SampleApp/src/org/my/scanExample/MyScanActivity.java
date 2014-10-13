@@ -12,9 +12,6 @@ import android.widget.TextView;
 
 public class MyScanActivity extends Activity
 {
-	// You MUST register with card.io to get an app token. Go to https://card.io/apps/new/
-    private static final String MY_CARDIO_APP_TOKEN = "MY APP TOKEN HERE";
-
 	final String TAG = getClass().getName();
 
 	private Button scanButton;
@@ -52,9 +49,6 @@ public class MyScanActivity extends Activity
 		// e.g. android:onClick="onScanPress"
 
 		Intent scanIntent = new Intent(this, CardIOActivity.class);
-
-		// required for authentication with card.io
-		scanIntent.putExtra(CardIOActivity.EXTRA_APP_TOKEN, MY_CARDIO_APP_TOKEN);
 
 		// customize these values to suit your needs.
 		scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, true); // default: true
