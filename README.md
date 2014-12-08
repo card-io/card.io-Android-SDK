@@ -159,4 +159,4 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 * If upgrading the card.io SDK, first remove all card.io libraries so that you don't accidentally ship obsolete or unnecessary libraries. The bundled libraries may change.
 * Processing images can be memory intensive.
     * [Memory Analysis for Android Applications](http://android-developers.blogspot.com/2011/03/memory-analysis-for-android.html) provides some useful information about how to track and reduce your app's memory useage.
-* card.io uses [SSL pinning](http://blog.thoughtcrime.org/authenticity-is-broken-in-ssl-but-your-app-ha) to protect against man-in-the-middle attacks. We encourage you to do the same.
+* card.io recommends the use of [SSL pinning](http://blog.thoughtcrime.org/authenticity-is-broken-in-ssl-but-your-app-ha) when transmitting sensitive information to protect against man-in-the-middle attacks. We encourage you to do the same.
