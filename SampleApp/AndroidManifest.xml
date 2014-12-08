@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="io.card.payment.CardIOActivity" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.CardIOActivity" android:configChanges="keyboardHidden|orientation" android:hardwareAccelerated="true"/>
     	<activity android:name="io.card.payment.DataEntryActivity" android:screenOrientation="portrait"/>
             
     </application>
