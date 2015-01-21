@@ -1,0 +1,59 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.1'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+
+    signingConfigs {
+        myConfig {
+            storeFile file("example.keystore")
+            storePassword "abc123"
+            keyAlias "example-alias"
+            keyPassword "abc123"
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+        }
+
+        release{
+            minifyEnabled true
+            proguardFile file('proguard.cfg')
+            signingConfig signingConfigs.myConfig
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                output.outputFile = new File(outputFile.parent, "card.io-sample-app-${variant.name}.apk")
+            }
+        }
+    }
+}
+
+dependencies {
+    if (parent != null) {
+        compile project (':card.io')
+    } else {
+        compile 'io.card:android-sdk:4.0.0'
+    }
+}
+

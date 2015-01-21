@@ -1,4 +1,34 @@
-.DS_Store
-bin
-gen
+# Built application files
+*.apk
+*.ap_
+
+# Files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
 local.properties
+
+# Eclipse settings files
+.settings/
+
+# IntelliJ project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Misc
+.DS_Store
+
+example.keystore

@@ -1,6 +1,24 @@
 card.io Android SDK change log and release notes
 ================================================
 
+4.0.0
+-----
+* Distribute .aar file instead of .jar and .so files
+* New extras on `CardIOActivity`
+  - `EXTRA_SCAN_INSTRUCTIONS`
+  - `EXTRA_HIDE_CARDIO_LOGO`
+  - `EXTRA_SCAN_OVERLAY_LAYOUT_ID`
+  - `EXTRA_SUPPRESS_SCAN`
+  - `EXTRA_RETURN_CARD_IMAGE`
+  - `EXTRA_KEEP_APPLICATION_THEME`
+  - `EXTRA_USE_PAYPAL_ACTIONBAR_ICON`
+* Remove deprecated extras and methods in `CardIOActivity`
+  - `canReadCardWithCamera(Context)` (use `canReadCardWithCamera()` instead)
+  - `EXTRA_REQUIRE_ZIP` (use `EXTRA_REQUIRE_POSTAL_CODE` instead)
+* New extra `EXTRA_CAPTURED_CARD_IMAGE` returned to calling Activity 
+* New class `BuildConfig`
+
+
 3.2.0
 -----
 * Eliminate App Token. Developers no longer need to sign up on the card.io site before using card.io.
@@ -23,8 +41,8 @@ card.io Android SDK change log and release notes
 
 3.1.3 October 9, 2013
 ------------------------
-* Add guide color customization through CardIOActivity.EXTRA_GUIDE_COLOR
-* Add ability to skip confirmation activity through CardIOActivity.EXTRA_SUPPRESS_CONFIRMATION
+* Add guide color customization through `CardIOActivity.EXTRA_GUIDE_COLOR`
+* Add ability to skip confirmation activity through `CardIOActivity.EXTRA_SUPPRESS_CONFIRMATION`
 * Fix camera not recognized issue for some devices
 
 3.1.2 - September 16, 2013
@@ -42,7 +60,7 @@ card.io Android SDK change log and release notes
 3.1.0 - August 13, 2013
 ------------------------
 * Add translations of all strings into ~20 languages, in addition to American English.
-* Translation choice is controlled by EXTRA_LANGUAGE_OR_LOCALE in CardIOActivity
+* Translation choice is controlled by `CardIOActivity.EXTRA_LANGUAGE_OR_LOCALE`
 * The translations that a few developers had previously created for their own apps will no longer be used by the SDK.
 * NOTE: Default language, if not set by your app, will now be based upon the device's current language setting.
 
@@ -78,7 +96,7 @@ card.io Android SDK change log and release notes
 3.0.2 - Oct 26, 2012
 --------------------
 * Fix NPE if values/strings.xml is missing from the project.
-* Fix native crash if a second scanner is launched from onActivityResult() of completion of the first.
+* Fix native crash if a second scanner is launched from `onActivityResult()` of completion of the first.
 
 3.0.1 - Oct 8, 2012
 --------------------

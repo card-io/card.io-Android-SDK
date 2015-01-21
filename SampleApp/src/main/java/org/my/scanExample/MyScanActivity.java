@@ -1,14 +1,14 @@
 package org.my.scanExample;
 
-import io.card.payment.CardIOActivity;
-import io.card.payment.CreditCard;
-import org.my.scanExample.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import io.card.payment.CardIOActivity;
+import io.card.payment.CreditCard;
 
 public class MyScanActivity extends Activity
 {
@@ -36,7 +36,7 @@ public class MyScanActivity extends Activity
 	protected void onResume() {
 		super.onResume();
 
-		if (CardIOActivity.canReadCardWithCamera(this)) {
+		if (CardIOActivity.canReadCardWithCamera()) {
 			scanButton.setText("Scan a credit card with card.io");
 		}
 		else {
@@ -58,6 +58,9 @@ public class MyScanActivity extends Activity
 		// hides the manual entry button
 		// if set, developers should provide their own manual entry mechanism in the app
 		scanIntent.putExtra(CardIOActivity.EXTRA_SUPPRESS_MANUAL_ENTRY, false); // default: false
+
+        // matches the theme of your application
+        scanIntent.putExtra(CardIOActivity.EXTRA_KEEP_APPLICATION_THEME, true); // default: false
 
 		// MY_SCAN_REQUEST_CODE is arbitrary and is only used within this activity.
 		startActivityForResult(scanIntent, MY_SCAN_REQUEST_CODE);

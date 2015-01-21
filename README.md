@@ -20,8 +20,6 @@ Also be sure to check and post to the [Stack Overflow card.io tag](http://stacko
 Instructions
 ------------
 
-The card.io Android SDK is a single card.io.jar file and two native libraries.
-
 The information in this guide is enough to get started. For additional details, see our **[javadoc](http://card-io.github.io/card.io-Android-SDK/)**.
 
 *(Note: in the past, developers needed to sign up at the [card.io site](https://www.card.io) and obtain an* `app token`. *This is no longer required.)* 
@@ -38,16 +36,7 @@ A manual entry fallback mode is provided for devices that do not meet these requ
 
 1. Get the latest SDK by cloning this repo or [downloading an archive of the most recent tag](https://github.com/card-io/card.io-Android-SDK/tags).
 
-2. Extract the card.io SDK
-
-    1. Unzip the tag archive into your project directory or copy `libs/*` into your projects `libs/` directory. 
-       - Gradle users with android-gradle-plugin version `0.7.2+` should put `card.io.jar` in `libs/` and the subfolders containing `*.so` files into `src/main/jniLibs`
-       - Note that the subdirectories containing `.so` files are important and should not be changed.
-
-
-        Note that the path for each of these files is important and should not be changed.
-
-    2. If using Eclipse, right-click <libs>libs/card.io.jar</libs> then select "Build Path" &rarr; "Add to Build Path".
+2. Extract the card.io SDK (see the SampleApp for an example)
 
 3. Edit AndroidManifest.xml. We're going to add a few additional items in here:
 
@@ -153,9 +142,6 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 * [Javadocs](http://card-io.github.io/card.io-Android-SDK/) are provided in this repo for a complete reference.
 * card.io errors and warnings will be logged to the "card.io" tag.
-* The card.io zip bundle is designed to be unzipped in to the your project directory.
-    * **You should not attempt to change this directory structure.**
-    * In particular, Android looks for files matching `libs/card.io.jar` and `libs/{processor}/*.so`.
 * If upgrading the card.io SDK, first remove all card.io libraries so that you don't accidentally ship obsolete or unnecessary libraries. The bundled libraries may change.
 * Processing images can be memory intensive.
     * [Memory Analysis for Android Applications](http://android-developers.blogspot.com/2011/03/memory-analysis-for-android.html) provides some useful information about how to track and reduce your app's memory useage.
