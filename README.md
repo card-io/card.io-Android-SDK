@@ -9,6 +9,12 @@ Stay up to date
 Please be sure to keep your app up to date with the latest version of the SDK.
 All releases follow [semantic versioning](http://semver.org/).
 
+The latest version is available via `mavenCentral()`.  Just add the following dependency:
+
+```
+compile 'io.card:android-sdk:4.0.0'
+```
+
 You can receive updates about new versions via a few different channels:
 
 * Follow [@cardio](https://twitter.com/cardio) (also great to send us feedback)
