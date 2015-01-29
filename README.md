@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/card-io/card.io-Android-SDK.svg)](https://travis-ci.org/card-io/card.io-Android-SDK)
+
 card.io SDK for Android
 ========================
 

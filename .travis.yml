@@ -1,0 +1,19 @@
+language: android
+jdk: oraclejdk7
+env:
+  matrix:
+  - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
+android:
+  components:
+  - build-tools-21.1.2
+before_install:
+- export ANDROID_HOME=/usr/local/android-sdk
+- export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+- echo "sdk.dir=$ANDROID_HOME" > local.properties
+script: cd SampleApp/; ./gradlew clean assembleDebug assembleDebugTest
+notifications:
+  webhooks:
+    urls:
+    - secure: A1YKQ32CBvm6s0gfwb+UKZuniYdb5ZUENvSpSt/k7nQmyZ9U0p4Sn8qqSSKfRyYVRLT3C3za53aoqFwSqFj6mZ82YO6HbKl/RqhGQLmdIPpyhXKUE5xKlyMbgmAYRBDh41+eQ1i22mkT+jiqVW06VFSB0YyeDKAZjXxk8hfyIUA=
+    on_success: change
+    on_failure: always
