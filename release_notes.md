@@ -1,6 +1,10 @@
 card.io Android SDK change log and release notes
 ================================================
 
+4.0.1
+-----
+* Minor bug fixes.
+
 4.0.0
 -----
 * Distribute .aar file instead of .jar and .so files
