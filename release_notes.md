@@ -1,6 +1,11 @@
 card.io Android SDK change log and release notes
 ================================================
 
+4.0.2
+-----
+* Fix crash caused when an application's theme specifies no action bar [#44](https://github.com/card-io/card.io-Android-SDK/issues/44)).
+* Use the application theme to define most of the UI's colors.
+
 4.0.1
 -----
 * Minor bug fixes.

@@ -14,7 +14,7 @@ All releases follow [semantic versioning](http://semver.org/).
 The latest version is available via `mavenCentral()`.  Just add the following dependency:
 
 ```
-compile 'io.card:android-sdk:4.0.1'
+compile 'io.card:android-sdk:4.0.2'
 ```
 
 You can receive updates about new versions via a few different channels:
