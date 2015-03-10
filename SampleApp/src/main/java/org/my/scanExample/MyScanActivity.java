@@ -50,7 +50,7 @@ public class MyScanActivity extends Activity {
         Intent scanIntent = new Intent(this, CardIOActivity.class);
 
         // customize these values to suit your needs.
-        scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, true); // default: true
+        scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, true); // default: false
         scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_CVV, false); // default: false
         scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_POSTAL_CODE, false); // default: false
 

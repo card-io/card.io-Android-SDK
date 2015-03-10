@@ -14,7 +14,7 @@ All releases follow [semantic versioning](http://semver.org/).
 The latest version is available via `mavenCentral()`.  Just add the following dependency:
 
 ```
-compile 'io.card:android-sdk:4.0.2'
+compile 'io.card:android-sdk:5.0.0'
 ```
 
 You can receive updates about new versions via a few different channels:
@@ -25,8 +25,8 @@ You can receive updates about new versions via a few different channels:
 
 Also be sure to check and post to the [Stack Overflow card.io tag](http://stackoverflow.com/questions/tagged/card.io).
 
-Instructions
-------------
+Integration instructions
+------------------------
 
 The information in this guide is enough to get started. For additional details, see our **[javadoc](http://card-io.github.io/card.io-Android-SDK/)**.
 
@@ -40,63 +40,67 @@ The information in this guide is enough to get started. For additional details, 
 
 A manual entry fallback mode is provided for devices that do not meet these requirements.
 
-### Instructions
-
-1. Get the latest SDK by cloning this repo or [downloading an archive of the most recent tag](https://github.com/card-io/card.io-Android-SDK/tags).
-
-2. Extract the card.io SDK (see the SampleApp for an example)
-
-3. Edit AndroidManifest.xml. We're going to add a few additional items in here:
-
-    1. Ensure your minimum SDK level is 8 or above. You should have an element like this in `<manifest>`:
+### Setup
 
 
-        ```xml
-        <uses-sdk android:minSdkVersion="8" />
-        ```
+##### If you use gradle, then add the following dependency from `mavenCentral()`:
 
-    2. Also in your `<manifest>` element, make sure the following permissions and features are present:
+```
+compile 'io.card:android-sdk:5.0.0'
+```
 
-        ```xml
-        <!-- Permission to use camera - required -->
-        <uses-permission android:name="android.permission.CAMERA" />
+##### If you use something other than gradle, then:
 
-        <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
-        <uses-permission android:name="android.permission.VIBRATE" />
+1. Edit AndroidManifest.xml. We're going to add a few additional items in here:
 
-        <!-- Camera features - recommended -->
-        <uses-feature android:name="android.hardware.camera" android:required="false" />
-        <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
-        <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
-        ```
-
-    3. Within the `<application>` element, add activity entries:
-
-        ```xml
-        <!-- Activities responsible for gathering payment info -->
-        <activity android:name="io.card.payment.CardIOActivity" android:configChanges="keyboardHidden|orientation" />
-        <activity android:name="io.card.payment.DataEntryActivity" />
-        ```
-
-4. Before you build in release mode, make sure to adjust your proguard configuration by adding the following to `proguard.cnf`:
-
-    ```
-    -keep class io.card.**
-    -keepclassmembers class io.card.** {
-        *;
-    }
+    ```xml
+    <uses-sdk android:minSdkVersion="8" />
     ```
 
-### Sample code
+2. Also in your `<manifest>` element, make sure the following permissions and features are present:
 
-First, we'll assume that you're going to launch the scanner from a button, and that you've set the button's onClick handler in the layout XML via `android:onClick="onScanPress"`. Then, add the method as:
+    ```xml
+    <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Permission to use camera - required -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Camera features - recommended -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    ```
+
+3. Within the `<application>` element, add activity entries:
+
+    ```xml
+    <!-- Activities responsible for gathering payment info -->
+    <activity android:name="io.card.payment.CardIOActivity" android:configChanges="keyboardHidden|orientation" />
+    <activity android:name="io.card.payment.DataEntryActivity" />
+    ```
+
+##### Note: Before you build in release mode, make sure to adjust your proguard configuration by adding the following to `proguard.cnf`:
+
+```
+-keep class io.card.**
+-keepclassmembers class io.card.** {
+    *;
+}
+```
+
+### Sample code  (See the SampleApp for an example)
+
+First, we'll assume that you're going to launch the scanner from a button,
+and that you've set the button's `onClick` handler in the layout XML via `android:onClick="onScanPress"`.
+Then, add the method as:
 
 ```java
 public void onScanPress(View v) {
     Intent scanIntent = new Intent(this, CardIOActivity.class);
 
     // customize these values to suit your needs.
-    scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, true); // default: true
+    scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, true); // default: false
     scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_CVV, false); // default: false
     scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_POSTAL_CODE, false); // default: false
 
@@ -105,7 +109,7 @@ public void onScanPress(View v) {
 }
 ```
 
-Next, we'll override `onActivityResult` to get the scan result.
+Next, we'll override `onActivityResult()` to get the scan result.
 
 ```java
 @Override

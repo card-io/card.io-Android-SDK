@@ -1,6 +1,14 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.0.0
+-----
+* Add automatic expiry-scanning.
+You can disable this feature via the new `EXTRA_SCAN_EXPIRY` extra of `CardIOActivity`.
+Note: Expiry scans will not infrequently fail to obtain the correct expiry date.
+We are continuing to work to improve expiry-scanning accuracy.
+* Fix crash when the `DataEntryActivity` is missing extras [#19](https://github.com/card-io/card.io-Android-SDK/issues/19)).
+
 4.0.2
 -----
 * Fix crash caused when an application's theme specifies no action bar [#44](https://github.com/card-io/card.io-Android-SDK/issues/44)).
