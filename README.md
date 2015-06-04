@@ -14,7 +14,7 @@ All releases follow [semantic versioning](http://semver.org/).
 The latest version is available via `mavenCentral()`.  Just add the following dependency:
 
 ```
-compile 'io.card:android-sdk:5.0.0'
+compile 'io.card:android-sdk:5.0.1'
 ```
 
 You can receive updates about new versions via a few different channels:
@@ -46,7 +46,7 @@ A manual entry fallback mode is provided for devices that do not meet these requ
 ##### If you use gradle, then add the following dependency from `mavenCentral()`:
 
 ```
-compile 'io.card:android-sdk:5.0.0'
+compile 'io.card:android-sdk:5.0.1'
 ```
 
 ##### If you use something other than gradle, then:
@@ -144,7 +144,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
             resultDisplayStr = "Scan was canceled.";
         }
         // do something with resultDisplayStr, maybe display it in a textView
-        // resultTextView.setText(resultDisplayStr);
+        // resultTextView.setText(resultStr);
     }
     // else handle other activity results
 }

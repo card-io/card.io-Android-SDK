@@ -1,6 +1,11 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.0.1
+-----
+* Prevent screenshots when the app is backgrounded via [FLAG_SECURE](http://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#FLAG_SECURE).
+* Fix issue where arm64-v8a devices were not allowing the scanning of devices [#62](https://github.com/card-io/card.io-Android-SDK/issues/62)).
+
 5.0.0
 -----
 * Add automatic expiry-scanning.
