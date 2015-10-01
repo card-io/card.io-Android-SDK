@@ -1,6 +1,17 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.1.0
+-----
+* Add arm64-v8a processor support [#33-source](https://github.com/card-io/card.io-Android-source/issues/33), [#51](https://github.com/card-io/card.io-Android-SDK/issues/51).
+* Add x86 processor support [#26-source](https://github.com/card-io/card.io-Android-source/issues/26).
+* Add x86_64 processor support.
+* Add support for Android 23 new permission model for the Camera permission [#78](https://github.com/card-io/card.io-Android-SDK/issues/78).  When permission is granted, the SDK performs as in previous versions.  When permission is or has already been denied, the SDK falls back to manual entry.  Note: this SDK does not call the `shouldShowRequestPermissionRationale()` method and does not show a rationale.  It is up to the implementor whether or not to show the Camera permission rationale before opening the SDK.
+* Populate CardIOActivity.EXTRA_CAPTURED_CARD_IMAGE when confirmation is shown [#10-source](https://github.com/card-io/card.io-Android-source/issues/10).
+* Fix issue where setting `EXTRA_KEEP_APPLICATION_THEME` would not create buttons that matched the theme [#24-source](https://github.com/card-io/card.io-Android-source/issues/24).
+* Add a default edit text hint color [#22-source](https://github.com/card-io/card.io-Android-source/issues/22).
+* Fix leaking IntentReceiver [#76](https://github.com/card-io/card.io-Android-SDK/issues/76).
+
 5.0.1
 -----
 * Prevent screenshots when the app is backgrounded via [FLAG_SECURE](http://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#FLAG_SECURE).
