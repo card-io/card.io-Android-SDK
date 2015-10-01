@@ -15,7 +15,7 @@ before_install:
 - echo "sdk.dir=$ANDROID_HOME" > local.properties
 script:
 - cd SampleApp/
-- ./gradlew clean assembleDebug assembleDebugTest
+- ./gradlew clean assembleDebug
 notifications:
   webhooks:
     urls:
