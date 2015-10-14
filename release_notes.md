@@ -1,6 +1,10 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.1.1
+-----
+* Fix bug where ActionBar was not properly hiding immediately after accepting the Camera permission.
+
 5.1.0
 -----
 * Add arm64-v8a processor support [#33-source](https://github.com/card-io/card.io-Android-source/issues/33), [#51](https://github.com/card-io/card.io-Android-SDK/issues/51).
