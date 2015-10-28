@@ -52,7 +52,7 @@ dependencies {
     if (parent != null) {
         compile project(':card.io')
     } else {
-        compile 'io.card:android-sdk:5.1.1'
+        compile 'io.card:android-sdk:5.1.2'
     }
 }
 

@@ -1,6 +1,10 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.1.2
+-----
+* Fix bug where denying the camera permission on Android 23 results in invalid data [#37-source](https://github.com/card-io/card.io-Android-source/issues/37).
+
 5.1.1
 -----
 * Fix bug where ActionBar was not properly hiding immediately after accepting the Camera permission.
