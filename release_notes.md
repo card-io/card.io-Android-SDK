@@ -1,6 +1,13 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.2.0
+-----
+* Add Cardholder Name to list of available manual entry fields, enabled via `CardIOActivity.EXTRA_REQUIRE_CARDHOLDER_NAME`.  (Thank you Dan Nizri and Zach Sweigart!)
+* Fix issue where certain devices would show the camera preview upside down [#91](https://github.com/card-io/card.io-Android-SDK/issues/91).
+* Fix issue where null could be set in the return bundle value for `CardIOActivity.EXTRA_SCAN_RESULT`.
+* Upgrade build tools.
+
 5.1.2
 -----
 * Fix bug where denying the camera permission on Android 23 results in invalid data [#37-source](https://github.com/card-io/card.io-Android-source/issues/37).
