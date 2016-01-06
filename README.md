@@ -36,7 +36,7 @@ The information in this guide is enough to get started. For additional details, 
 
 *   Rear-facing camera.
 *   Android SDK version 8 (Android 2.2) or later.
-*   ARMv7 processor.
+*   armeabi-v7a, arm64-v8, x86, or x86_64 processor.
 
 A manual entry fallback mode is provided for devices that do not meet these requirements.
 
