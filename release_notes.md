@@ -1,6 +1,10 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.3.0
+-----
+* Add option for only numeric input for postal code, `EXTRA_RESTRICT_POSTAL_CODE_TO_NUMERIC_ONLY` [#100](https://github.com/card-io/card.io-Android-SDK/issues/100).
+
 5.2.0
 -----
 * Add Cardholder Name to list of available manual entry fields, enabled via `CardIOActivity.EXTRA_REQUIRE_CARDHOLDER_NAME`.  (Thank you Dan Nizri and Zach Sweigart!)
