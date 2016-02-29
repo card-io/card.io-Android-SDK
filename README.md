@@ -144,7 +144,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
             resultDisplayStr = "Scan was canceled.";
         }
         // do something with resultDisplayStr, maybe display it in a textView
-        // resultTextView.setText(resultStr);
+        // resultTextView.setText(resultDisplayStr);
     }
     // else handle other activity results
 }
