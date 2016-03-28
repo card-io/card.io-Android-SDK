@@ -14,7 +14,7 @@ All releases follow [semantic versioning](http://semver.org/).
 The latest version is available via `mavenCentral()`.  Just add the following dependency:
 
 ```
-compile 'io.card:android-sdk:5.3.0'
+compile 'io.card:android-sdk:5.3.1'
 ```
 
 You can receive updates about new versions via a few different channels:
@@ -46,7 +46,7 @@ A manual entry fallback mode is provided for devices that do not meet these requ
 ##### If you use gradle, then add the following dependency from `mavenCentral()`:
 
 ```
-compile 'io.card:android-sdk:5.3.0'
+compile 'io.card:android-sdk:5.3.1'
 ```
 
 ##### If you use something other than gradle, then:
@@ -79,15 +79,6 @@ compile 'io.card:android-sdk:5.3.0'
     <activity android:name="io.card.payment.CardIOActivity" android:configChanges="keyboardHidden|orientation" />
     <activity android:name="io.card.payment.DataEntryActivity" />
     ```
-
-##### Note: Before you build in release mode, make sure to adjust your proguard configuration by adding the following to `proguard.cnf`:
-
-```
--keep class io.card.**
--keepclassmembers class io.card.** {
-    *;
-}
-```
 
 ### Sample code  (See the SampleApp for an example)
 
@@ -153,8 +144,19 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 ### Hints &amp; Tips
 
 * [Javadocs](http://card-io.github.io/card.io-Android-SDK/) are provided in this repo for a complete reference.
+* Note: the correct proguard file is automatically imported into your gradle project from the `aar` package.  Anyone not using gradle will need to extract the proguard file and add it to their proguard config.
 * card.io errors and warnings will be logged to the "card.io" tag.
 * If upgrading the card.io SDK, first remove all card.io libraries so that you don't accidentally ship obsolete or unnecessary libraries. The bundled libraries may change.
 * Processing images can be memory intensive.
     * [Memory Analysis for Android Applications](http://android-developers.blogspot.com/2011/03/memory-analysis-for-android.html) provides some useful information about how to track and reduce your app's memory useage.
 * card.io recommends the use of [SSL pinning](http://blog.thoughtcrime.org/authenticity-is-broken-in-ssl-but-your-app-ha) when transmitting sensitive information to protect against man-in-the-middle attacks.
+
+Contributing
+------------
+
+Please read our [contributing guidelines](CONTRIBUTING.md) prior to submitting a Pull Request.
+
+License
+-------
+
+Please refer to this repo's [license file](LICENSE.txt).

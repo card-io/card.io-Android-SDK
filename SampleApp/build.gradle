@@ -33,7 +33,7 @@ android {
 
         release {
             minifyEnabled true
-            proguardFile file('proguard.cfg')
+            proguardFile getDefaultProguardFile('proguard-android.txt')
             signingConfig signingConfigs.myConfig
         }
     }
@@ -52,7 +52,7 @@ dependencies {
     if (parent != null) {
         compile project(':card.io')
     } else {
-        compile 'io.card:android-sdk:5.3.0'
+        compile 'io.card:android-sdk:5.3.1'
     }
 }
 
