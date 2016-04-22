@@ -1,6 +1,13 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.3.3
+-----
+* Fix newline issue in ES locale [#142](https://github.com/card-io/card.io-Android-SDK/issues/142).
+* Fix build issue with ndk 11 [card.io-Android-source#60](https://github.com/card-io/card.io-Android-source/issues/60).
+* Upgrade gradle to 2.12.
+* Upgrade Android Gradle plugin to 2.0.0.
+
 5.3.2
 -----
 * Fix issue where Android 23 and above devices would crash when the library's `.so` files were removed [PayPal-Android-SDK#279](https://github.com/paypal/PayPal-Android-SDK/issues/279).

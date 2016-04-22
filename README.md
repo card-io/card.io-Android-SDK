@@ -14,7 +14,7 @@ All releases follow [semantic versioning](http://semver.org/).
 The latest version is available via `mavenCentral()`.  Just add the following dependency:
 
 ```
-compile 'io.card:android-sdk:5.3.2'
+compile 'io.card:android-sdk:5.3.3'
 ```
 
 You can receive updates about new versions via a few different channels:
@@ -46,7 +46,7 @@ A manual entry fallback mode is provided for devices that do not meet these requ
 ##### If you use gradle, then add the following dependency from `mavenCentral()`:
 
 ```
-compile 'io.card:android-sdk:5.3.2'
+compile 'io.card:android-sdk:5.3.3'
 ```
 
 ##### If you use something other than gradle, then:
@@ -159,4 +159,4 @@ Please read our [contributing guidelines](CONTRIBUTING.md) prior to submitting a
 License
 -------
 
-Please refer to this repo's [license file](LICENSE.txt).
+Please refer to this repo's [license file](LICENSE).
