@@ -1,6 +1,10 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.3.4
+-----
+* Fix crash on Android 23 and above where `onRequestPermissionsResult()` returns an empty array [card.io-Android-source#70](https://github.com/card-io/card.io-Android-source/issues/70).
+
 5.3.3
 -----
 * Fix newline issue in ES locale [#142](https://github.com/card-io/card.io-Android-SDK/issues/142).
