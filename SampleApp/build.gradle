@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.0'
@@ -8,14 +8,14 @@ buildscript {
 }
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '23.0.1'
+    buildToolsVersion "23.0.1"
 
     signingConfigs {
         myConfig {
@@ -52,7 +52,7 @@ dependencies {
     if (parent != null) {
         compile project(':card.io')
     } else {
-        compile 'io.card:android-sdk:5.3.4'
+        compile 'io.card:android-sdk:5.4.0'
     }
 }
 

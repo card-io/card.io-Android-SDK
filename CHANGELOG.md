@@ -1,6 +1,15 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.4.0
+-----
+* Add ability to blur all digits in the scanned card image, minus any number of digits to remain unblurred, enabled via `CardIOActivity.EXTRA_UNBLUR_DIGITS`.   (Thank you Michael Schmoock!)
+* Fix issue where Maestro cards were not correctly recognized [#154](https://github.com/card-io/card.io-Android-SDK/issues/154).
+* Fix issue on Android 23 and above where `CardIOActivity#canReadCardWithCamera()` would return the incorrect value if permissions had not been granted [#136](https://github.com/card-io/card.io-Android-SDK/issues/136).  Now defaults to `true` in such cases.
+* Add missing locales to javadocs [card.io-Android-source#75](https://github.com/card-io/card.io-Android-source/issues/75).
+* Upgrade gradle to 2.13.
+* Upgrade Android Gradle plugin to 2.1.0.
+
 5.3.4
 -----
 * Fix crash on Android 23 and above where `onRequestPermissionsResult()` returns an empty array [card.io-Android-source#70](https://github.com/card-io/card.io-Android-source/issues/70).
