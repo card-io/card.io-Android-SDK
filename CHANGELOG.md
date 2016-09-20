@@ -1,9 +1,15 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.4.1
+-----
+* Add ability to specify an alternative search path for the native libraries via `CardIONativeLibsConfig` [card.io-Android-source#86](https://github.com/card-io/card.io-Android-source/pull/86). Thank you Thorben Primke!
+* Updated gradle plugin and wrapper versions.
+* Bump compile SDK to 24.
+
 5.4.0
 -----
-* Add ability to blur all digits in the scanned card image, minus any number of digits to remain unblurred, enabled via `CardIOActivity.EXTRA_UNBLUR_DIGITS`.   (Thank you Michael Schmoock!)
+* Add ability to blur all digits in the scanned card image, minus any number of digits to remain unblurred, enabled via `CardIOActivity.EXTRA_UNBLUR_DIGITS`. Thank you Michael Schmoock!
 * Fix issue where Maestro cards were not correctly recognized [#154](https://github.com/card-io/card.io-Android-SDK/issues/154).
 * Fix issue on Android 23 and above where `CardIOActivity#canReadCardWithCamera()` would return the incorrect value if permissions had not been granted [#136](https://github.com/card-io/card.io-Android-SDK/issues/136).  Now defaults to `true` in such cases.
 * Add missing locales to javadocs [card.io-Android-source#75](https://github.com/card-io/card.io-Android-source/issues/75).
@@ -36,7 +42,7 @@ card.io Android SDK change log and release notes
 
 5.2.0
 -----
-* Add Cardholder Name to list of available manual entry fields, enabled via `CardIOActivity.EXTRA_REQUIRE_CARDHOLDER_NAME`.  (Thank you Dan Nizri and Zach Sweigart!)
+* Add Cardholder Name to list of available manual entry fields, enabled via `CardIOActivity.EXTRA_REQUIRE_CARDHOLDER_NAME`. Thank you Dan Nizri and Zach Sweigart!
 * Fix issue where certain devices would show the camera preview upside down [#91](https://github.com/card-io/card.io-Android-SDK/issues/91).
 * Fix issue where null could be set in the return bundle value for `CardIOActivity.EXTRA_SCAN_RESULT`.
 * Upgrade build tools.
@@ -84,26 +90,17 @@ We are continuing to work to improve expiry-scanning accuracy.
 
 4.0.0
 -----
-* Distribute .aar file instead of .jar and .so files
-* New extras on `CardIOActivity`
-  - `EXTRA_SCAN_INSTRUCTIONS`
-  - `EXTRA_HIDE_CARDIO_LOGO`
-  - `EXTRA_SCAN_OVERLAY_LAYOUT_ID`
-  - `EXTRA_SUPPRESS_SCAN`
-  - `EXTRA_RETURN_CARD_IMAGE`
-  - `EXTRA_KEEP_APPLICATION_THEME`
-  - `EXTRA_USE_PAYPAL_ACTIONBAR_ICON`
-* Remove deprecated extras and methods in `CardIOActivity`
-  - `canReadCardWithCamera(Context)` (use `canReadCardWithCamera()` instead)
-  - `EXTRA_REQUIRE_ZIP` (use `EXTRA_REQUIRE_POSTAL_CODE` instead)
-* New extra `EXTRA_CAPTURED_CARD_IMAGE` returned to calling Activity 
-* New class `BuildConfig`
+* Distribute .aar file instead of .jar and .so files.
+* New extras on `CardIOActivity`: `EXTRA_SCAN_INSTRUCTIONS`, `EXTRA_HIDE_CARDIO_LOGO`, `EXTRA_SCAN_OVERLAY_LAYOUT_ID`, `EXTRA_SUPPRESS_SCAN`, `EXTRA_RETURN_CARD_IMAGE`, `EXTRA_KEEP_APPLICATION_THEME`, and `EXTRA_USE_PAYPAL_ACTIONBAR_ICON`.
+* Remove deprecated extras and methods in `CardIOActivity`: `canReadCardWithCamera(Context)` and `EXTRA_REQUIRE_ZIP`.
+* New extra `EXTRA_CAPTURED_CARD_IMAGE` returned to calling Activity.
+* New class `BuildConfig`.
 
 
 3.2.0
 -----
 * Eliminate App Token. Developers no longer need to sign up on the card.io site before using card.io.
-* Add Icelandic (is) to our supported localizations. (Thank you, Martin Kaplan!) 
+* Add Icelandic (is) to our supported localizations. Thank you, Martin Kaplan!
 
 3.1.6
 -----
@@ -117,42 +114,42 @@ We are continuing to work to improve expiry-scanning accuracy.
 
 3.1.4 January 3, 2014
 ------------------------
-* Remove any transparency from guide color
-* Add language support for Arabic and Malay
+* Remove any transparency from guide color.
+* Add language support for Arabic and Malay.
 
 3.1.3 October 9, 2013
 ------------------------
-* Add guide color customization through `CardIOActivity.EXTRA_GUIDE_COLOR`
-* Add ability to skip confirmation activity through `CardIOActivity.EXTRA_SUPPRESS_CONFIRMATION`
-* Fix camera not recognized issue for some devices
+* Add guide color customization through `CardIOActivity.EXTRA_GUIDE_COLOR`.
+* Add ability to skip confirmation activity through `CardIOActivity.EXTRA_SUPPRESS_CONFIRMATION`.
+* Fix camera not recognized issue for some devices.
 
 3.1.2 - September 16, 2013
 ------------------------
-* Restrict postal code maximum length
-* Add convenience method to localize CardType
-* Fix Hebrew phone settings detection bug
-* Add SampleApp
-* Reverse release_notes order
+* Restrict postal code maximum length.
+* Add convenience method to localize CardType.
+* Fix Hebrew phone settings detection bug.
+* Add SampleApp.
+* Reverse release_notes order.
 
 3.1.1 - August 30, 2013
 ------------------------
-* Update globalization strings for 25 languages/locales
+* Update globalization strings for 25 languages/locales.
 
 3.1.0 - August 13, 2013
 ------------------------
 * Add translations of all strings into ~20 languages, in addition to American English.
-* Translation choice is controlled by `CardIOActivity.EXTRA_LANGUAGE_OR_LOCALE`
+* Translation choice is controlled by `CardIOActivity.EXTRA_LANGUAGE_OR_LOCALE`.
 * The translations that a few developers had previously created for their own apps will no longer be used by the SDK.
 * NOTE: Default language, if not set by your app, will now be based upon the device's current language setting.
 
 3.0.8 - July 3, 2013
 ---------------------
-* Fix pre Android 4.0 hanging issue
+* Fix pre Android 4.0 hanging issue.
 
 3.0.7 - July 3, 2013
 ---------------------
-* Fix rotation issue when starting in landscape mode
-* Fix card image disappearing when rotating device in card details screen
+* Fix rotation issue when starting in landscape mode.
+* Fix card image disappearing when rotating device in card details screen.
 
 3.0.6 - June 21, 2013
 ---------------------
@@ -161,14 +158,14 @@ We are continuing to work to improve expiry-scanning accuracy.
 
 3.0.5 - May 23, 2013
 --------------------
-* UI updates
-* Don't require portrait for DataEntryActivity
-* Fix scanner crash in landscape
+* UI updates.
+* Don't require portrait for DataEntryActivity.
+* Fix scanner crash in landscape.
 
 3.0.4 - May 14, 2013
 --------------------
 * Fix orientation bugs to support some tablets.
-* Use PayPal logo instead of card.io by default. (see javadoc to switch back)
+* Use PayPal logo instead of card.io by default. See javadoc to switch back.
 
 3.0.3 - Nov 27, 2012
 --------------------
@@ -185,12 +182,12 @@ We are continuing to work to improve expiry-scanning accuracy.
 
 3.0.0
 --------------------
-* Skipped
+* Skipped.
 
 2.4.3 - Aug 31, 2012
 --------------------
-* Correct layouts for high resolution cameras & xhdpi displays
-* Fix crash on HTC ICS
+* Correct layouts for high resolution cameras & xhdpi displays.
+* Fix crash on HTC ICS.
 
 2.4.2 - Aug 23, 2012
 --------------------
@@ -199,7 +196,7 @@ We are continuing to work to improve expiry-scanning accuracy.
 
 2.4.1 - Aug 22, 2012
 --------------------
-* Work around a crash in some Qualcomm camera drivers. (e.g. Samsung Galaxy II S running Android 4.0.4)
+* Work around a crash in some Qualcomm camera drivers, e.g. Samsung Galaxy II S running Android 4.0.4.
 * Improve efficiency of internal API.
 
 2.4.0 - June 25, 2012
@@ -213,12 +210,12 @@ We are continuing to work to improve expiry-scanning accuracy.
 
 2.3.2 - June 4, 2012
 ------------------
-* Support scanning in non-NEON ARMv7 devices (e.g. nVidia Tegra2)
-* Support manual entry in all other devices. (Including those based on MIPS or x86)
+* Support scanning in non-NEON ARMv7 devices, e.g. nVidia Tegra2.
+* Support manual entry in all other devices. Including those based on MIPS or x86.
 * Fix exception in charge flow caused by users pressing the home button while the charge is processing.
 
 *************************
-IMPORTANT: You should delete libs/*/libcardio*.so from your project directory before unzipping the new SDK. (This library is obsolete and will only make your .apk bigger if it is included.)
+IMPORTANT: You should delete libs/*/libcardio*.so from your project directory before unzipping the new SDK. This library is obsolete and will only make your .apk bigger if it is included.
 
 The bundled libraries are:
 
@@ -238,11 +235,11 @@ Note that if your app is not targeting x86 or MIPS, you can safely leave out the
 
 2.3.1
 --------------------
-* Skipped
+* Skipped.
 
 2.3.0
 --------------------
-* Skipped
+* Skipped.
 
 2.2.1 - April 20, 2012
 --------------------
@@ -254,7 +251,7 @@ Note that if your app is not targeting x86 or MIPS, you can safely leave out the
 --------------------
 
 *************************
-IMPORTANT: You should delete libs/armeabi*/libcardio.so from your project directory before unzipping the new SDK. (This library is obsolete and will only make your .apk bigger if it is included.)
+IMPORTANT: You should delete libs/armeabi*/libcardio.so from your project directory before unzipping the new SDK. This library is obsolete and will only make your .apk bigger if it is included.
 
 *************************
 
@@ -278,13 +275,13 @@ IMPORTANT: You should delete libs/armeabi*/libcardio.so from your project direct
 
 2.0.5 - February 22, 2012
 --------------------
-* Performance improvements in SSL pinning
-* Fix SSL pinning bug in Android 4.0
+* Performance improvements in SSL pinning.
+* Fix SSL pinning bug in Android 4.0.
 
 2.0.4 - February 13, 2012
 --------------------
 * Enhance security with SSL pinning.
-* Properly check for the absence of the NEON instruction set in some ARMv7 devices. (Notably those based on nVidia Tegra 2)
+* Properly check for the absence of the NEON instruction set in some ARMv7 devices. Notably those based on nVidia Tegra 2.
 * Fix bugs relating to cancel/back.
 
 2.0.3 - January 31, 2012
@@ -294,9 +291,9 @@ IMPORTANT: You should delete libs/armeabi*/libcardio.so from your project direct
 
 2.0.2 - January 27, 2012
 --------------------
-* Additional error checking and catching
-* Be more explicit about device problems when we fall back to manual entry
-* Expose more logging to developers
+* Additional error checking and catching.
+* Be more explicit about device problems when we fall back to manual entry.
+* Expose more logging to developers.
 
 2.0.1 - January 20, 2012
 --------------------
@@ -306,13 +303,13 @@ IMPORTANT: You should delete libs/armeabi*/libcardio.so from your project direct
 
 2.0.0 - January 18, 2012
 -------------------
-* (new!) Support processing charges
-* Rename package io.card.scan to io.card.payments
+* (new!) Support processing charges.
+* Rename package io.card.scan to io.card.payments.
 * Refactor scan interface. See https://card.io/resources/javadoc/index.html to see a complete list of deprecated methods & constants.
 * Updated HTTPS library for better performance while scanning.
 * Fixed crashes in Android 4.0/Ice Cream Sandwich.
 
 1.0.0 - Wednesday, 8/24/2011
 -------------------
-* First release
+* First release.
 
