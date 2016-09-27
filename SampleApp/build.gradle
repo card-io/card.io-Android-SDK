@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:2.2.0'
     }
 }
 
@@ -52,7 +52,7 @@ dependencies {
     if (parent != null) {
         compile project(':card.io')
     } else {
-        compile 'io.card:android-sdk:5.4.1'
+        compile 'io.card:android-sdk:5.4.2'
     }
 }
 

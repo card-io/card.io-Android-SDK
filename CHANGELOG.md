@@ -1,6 +1,13 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.4.2
+-----
+* Add Mastercard 2-series support.
+* Bump compile SDK to 24 for reals.
+* Compile distributed package with NDK to r12b (previous was r11c).
+* Update Android Gradle plugin to 2.2.0.
+
 5.4.1
 -----
 * Add ability to specify an alternative search path for the native libraries via `CardIONativeLibsConfig` [card.io-Android-source#86](https://github.com/card-io/card.io-Android-source/pull/86). Thank you Thorben Primke!
