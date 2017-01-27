@@ -1,6 +1,14 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.5.0
+-----
+* Update Gradle build plugin to 2.2.3.
+* Update compile and target SDK versions to 25.
+* Update NDK to r13b.
+* Increase `minSdkVersion` to 16.
+* Upgrade OpenCV to 2.4.13.
+
 5.4.2
 -----
 * Add Mastercard 2-series support.

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".SampleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/gather_expiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="Expiry"
+                android:onClick="onExpiryToggle"/>
+
+            <CheckBox
+                android:id="@+id/gather_cvv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="CVV"/>
+
+            <CheckBox
+                android:id="@+id/gather_postal_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="Postal Code"/>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/gather_cardholder_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cardholder Name"/>
+
+        <CheckBox
+            android:id="@+id/postal_code_numeric_only"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restrict Postal Code to Numeric Only"/>
+
+        <CheckBox
+            android:id="@+id/scan_expiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Expiry"
+            android:checked="true"/>
+
+        <CheckBox
+            android:id="@+id/force_manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Force keyboard entry (bypass scan)"/>
+
+        <CheckBox
+            android:id="@+id/suppress_manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suppress keyboard number entry"/>
+
+        <CheckBox
+            android:id="@+id/suppress_confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suppress confirmation"/>
+
+        <CheckBox
+            android:id="@+id/detect_only"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detect card-ish rectangle only"/>
+
+        <CheckBox
+            android:id="@+id/use_card_io_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use card.io logo"/>
+
+        <CheckBox
+            android:id="@+id/show_paypal_action_bar_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PayPal icon in action bar"/>
+
+        <CheckBox
+            android:id="@+id/keep_application_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keep application theme"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Language:"/>
+
+            <Spinner
+                android:id="@+id/language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="50dp"
+                android:text="Digits not blurred:"/>
+
+            <EditText
+                android:id="@+id/unblur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:gravity="center"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="Scan Credit Card using Card.io"
+                android:onClick="onScan"/>
+
+            <Button
+                android:id="@+id/auto_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:onClick="onAutotest"
+                android:text="Auto-test loop"/>
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/recordings"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/result_card_type_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/result_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

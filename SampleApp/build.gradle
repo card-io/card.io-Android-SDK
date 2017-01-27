@@ -3,19 +3,31 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
+        classpath 'com.android.tools.build:gradle:2.2.3'
     }
 }
 
 repositories {
     jcenter()
+    maven {
+        url "https://jitpack.io"
+    }
 }
 
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId "io.card.development"
+        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+    }
 
     signingConfigs {
         myConfig {
@@ -27,10 +39,6 @@ android {
     }
 
     buildTypes {
-        debug {
-            applicationIdSuffix ".debug"
-        }
-
         release {
             minifyEnabled true
             proguardFile getDefaultProguardFile('proguard-android.txt')
@@ -52,8 +60,13 @@ dependencies {
     if (parent != null) {
         compile project(':card.io')
     } else {
-        compile 'io.card:android-sdk:5.4.2'
+        compile 'io.card:android-sdk:5.5.0'
     }
+
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4'
+
+    androidTestCompile "com.android.support.test.espresso:espresso-core:2.2.2"
+    androidTestCompile "com.github.lkorth:device-automator:01d85912ec"
 }
 
 task wrapper(type: Wrapper) {
