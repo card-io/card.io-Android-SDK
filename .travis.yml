@@ -1,13 +1,11 @@
 language: android
 jdk: oraclejdk8
-env:
-  matrix:
-  - ANDROID_TARGET=android-24  ANDROID_ABI=armeabi-v7a
 android:
   components:
   - tools
-  - android-24
-  - build-tools-24.0.1
+  - tools
+  - android-25
+  - build-tools-25.0.0
   - platform-tools
 before_install:
 - export ANDROID_HOME=/usr/local/android-sdk
