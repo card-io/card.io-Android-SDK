@@ -30,18 +30,17 @@ Integration instructions
 
 The information in this guide is enough to get started. For additional details, see our **[javadoc](http://card-io.github.io/card.io-Android-SDK/)**.
 
-*(Note: in the past, developers needed to sign up at the [card.io site](https://www.card.io) and obtain an* `app token`. *This is no longer required.)* 
+*(Note: in the past, developers needed to sign up at the [card.io site](https://www.card.io) and obtain an* `app token`. *This is no longer required.)*
 
 ### Requirements for card scanning
 
 *   Rear-facing camera.
-*   Android SDK version 8 (Android 2.2) or later.
+*   Android SDK version 16 (Android 4.1) or later.
 *   armeabi-v7a, arm64-v8, x86, or x86_64 processor.
 
 A manual entry fallback mode is provided for devices that do not meet these requirements.
 
 ### Setup
-
 
 ##### If you use gradle, then add the following dependency from `mavenCentral()`:
 
@@ -54,7 +53,7 @@ compile 'io.card:android-sdk:5.5.0'
 1. Edit AndroidManifest.xml. We're going to add a few additional items in here:
 
     ```xml
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="16" />
     ```
 
 2. Also in your `<manifest>` element, make sure the following permissions and features are present:
