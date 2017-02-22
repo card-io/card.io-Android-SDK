@@ -42,42 +42,11 @@ A manual entry fallback mode is provided for devices that do not meet these requ
 
 ### Setup
 
-##### If you use gradle, then add the following dependency from `mavenCentral()`:
+Add the dependency in your `build.gradle`:
 
 ```
 compile 'io.card:android-sdk:5.5.0'
 ```
-
-##### If you use something other than gradle, then:
-
-1. Edit AndroidManifest.xml. We're going to add a few additional items in here:
-
-    ```xml
-    <uses-sdk android:minSdkVersion="16" />
-    ```
-
-2. Also in your `<manifest>` element, make sure the following permissions and features are present:
-
-    ```xml
-    <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-
-    <!-- Permission to use camera - required -->
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <!-- Camera features - recommended -->
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
-    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
-    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
-    ```
-
-3. Within the `<application>` element, add activity entries:
-
-    ```xml
-    <!-- Activities responsible for gathering payment info -->
-    <activity android:name="io.card.payment.CardIOActivity" android:configChanges="keyboardHidden|orientation" />
-    <activity android:name="io.card.payment.DataEntryActivity" />
-    ```
 
 ### Sample code  (See the SampleApp for an example)
 
