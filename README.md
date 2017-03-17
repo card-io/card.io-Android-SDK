@@ -14,7 +14,7 @@ All releases follow [semantic versioning](http://semver.org/).
 The latest version is available via `mavenCentral()`.  Just add the following dependency:
 
 ```
-compile 'io.card:android-sdk:5.5.0'
+compile 'io.card:android-sdk:5.5.1'
 ```
 
 You can receive updates about new versions via a few different channels:

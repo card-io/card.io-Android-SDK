@@ -148,8 +148,8 @@ public class SampleActivity extends Activity {
     @Override
     public void onStop() {
         super.onStop();
+
         mResultLabel.setText("");
-        Log.d(TAG, "onStop()");
     }
 
     @Override
@@ -206,6 +206,7 @@ public class SampleActivity extends Activity {
         mResultCardTypeImage.setImageBitmap(cardTypeImage);
 
         Log.i(TAG, "Set result: " + outStr);
+
         mResultLabel.setText(outStr);
     }
 

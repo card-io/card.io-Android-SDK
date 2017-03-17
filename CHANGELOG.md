@@ -1,6 +1,13 @@
 card.io Android SDK change log and release notes
 ================================================
 
+5.5.1
+-----
+* Remove sample app signing (fixes [#125](https://github.com/card-io/card.io-Android-source/issues/125)).
+* Fix manual entry Activity started twice when rejecting camera permission (fixes [#128](https://github.com/card-io/card.io-Android-source/pull/128), [#150](https://github.com/card-io/card.io-Android-SDK/issues/150)).
+* Remove unnecessary logging (fixes [#184](https://github.com/card-io/card.io-Android-SDK/issues/184)).
+* Compile distributed package with NDK r14.
+
 5.5.0
 -----
 * Update Gradle build plugin to 2.2.3.
